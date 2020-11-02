@@ -1,0 +1,20 @@
+
+{% from "_render_field.html" import render_field %}
+
+<html>
+<head>
+<title>Створюємо карту</title>
+</head>
+<body>
+<h1>Створюємо карту</h1>
+<form method="POST" action="{{ url_for('cre') }}">
+    {{ form.csrf_token }}
+
+    {{ render_field(form.type_ )}}
+
+    {{ render_field(form.rate )}}
+
+    <input type="submit" value="Підтвердити створення">
+</form>
+</body>
+</html>

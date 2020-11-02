@@ -1,0 +1,41 @@
+
+{% from "_render_field.html" import render_field %}
+
+<html>
+<head>
+<title>Реєстрація</title>
+</head>
+<body>
+<h1>Реєстрація</h1>
+<form method="POST" action="{{ url_for('re') }}">
+    {{ form.csrf_token }}
+
+    {{ render_field(form.name )}}
+
+    {{ render_field(form.surname )}}
+
+    {{ render_field(form.type_of_passport )}}
+
+    {{ render_field(form.passport_id )}}
+
+    {{ render_field(form.IPN )}}
+
+    {{ render_field(form.city )}}
+
+    {{ render_field(form.email )}}
+
+    {{ render_field(form.phone )}}
+
+    {{ render_field(form.password )}}
+
+    {{ render_field(form.confirm )}}
+
+    {{ render_field(form.secret) }}
+
+    {{ render_field(form.answer) }}
+
+
+    <input type="submit" value="Зареєструватися">
+</form>
+</body>
+</html>
